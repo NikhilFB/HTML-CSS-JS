@@ -1,7 +1,11 @@
-let button = document.querySelector(".button");
+let button = document.querySelector(".signup-button");
 let tooltip1 = document.querySelector("#message1");
 let tooltip2 = document.querySelector("#message2");
-let tooltip3 = document.querySelector("#message3")
+let tooltip3 = document.querySelector("#message3");
+
+let sidebar = document.querySelector(".ham1");
+let openButton = document.querySelector(".ham-button");
+let closeButton = document.querySelector(".close-button");
 
 
 button.addEventListener('click',() => {
@@ -37,4 +41,14 @@ button.addEventListener('click',() => {
     return;
    
   }
-})
+});
+openButton.addEventListener('click',() => {
+  sidebar.classList.add('active');
+
+});
+
+closeButton.addEventListener('click',() => {
+  sidebar.classList.remove('active');
+
+});
+
