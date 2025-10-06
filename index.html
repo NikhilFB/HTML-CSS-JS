@@ -1,44 +1,48 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel = "stylesheet" href = "styles.css">
-  </head>
-  <body>
-    <form class = "sign-up-form"> 
-      <div class = "parent">
-      <p class ="create">Create account</p>
-      <p class = "description">Join us and explore the future.</p>
 
-      <div class = "input1" >
-        <input class = "username" id = "username1" type = "text" placeholder = " ">
-        <label for="username">Username</label>
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
 
-      </div>
-      <div class = "input1">
-        <input  class = "email" type = "text"  id = "email1" placeholder = " ">
-        <label for="Email">Email</label>
+<body>
+  <div class="parent">
+    <p class="create">Create account</p>
+    <p class="description">Join us and explore the future.</p>
 
-      </div>
+    <div class="input1">
+      <input class="username" id="username1" type="text" placeholder=" ">
+      <label for="username">Username</label>
+      <div class = "tool-tip" id="message1"></div>
 
-      <div class = "input1">
-        <input  class = "password" type = "text"  id = "password1" placeholder = " " >
-        <label for="Password">Password</label>
+    </div>
+    <div class="input1">
+      <input class="email" type="text" id="email1" placeholder=" ">
+      <label for="Email">Email</label>
+      <div class = "tool-tip" id="message2"></div>
 
-      </div>
-      <p id = "message"></p>
-     
-     
-      <button class = "button">Sign Up</button>
-
-    </form>
-    
-      <div class = "login">
-        <p class = "existing-account">Already have an account?</p>
-        <a class = "login2">Login</a>
-      </div>
-    
     </div>
 
-    <script src = "index.js"></script>
-  </body>
+    <div class="input1">
+      <input class="password" type="text" id="password1" placeholder=" ">
+      <label for="Password">Password</label>
+      <p class = "tool-tip" id="message3"></div>
+
+    </div>
+    
+
+
+    <button class="button">Sign Up</button>
+
+
+    <div class="login">
+      <p class="existing-account">Already have an account?</p>
+      <a class="login2">Login</a>
+    </div>
+
+  </div>
+
+  <script src="index.js"></script>
+</body>
+
 </html>
