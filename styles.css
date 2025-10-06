@@ -195,3 +195,36 @@ input{
 .options a:hover{
   text-decoration:underline;
 }
+.final {
+  text-align:center;
+  padding:10px;
+  margin:auto ;
+  height:130px;
+  transform: translateX(20px);
+  top: 100px;          /* fixed vertical position */
+  position: fixed; 
+  width: 300px;
+  font-family: 'Poppins','sans-serif';
+  font-size: 15px;
+  font-weight: 500;
+  color: black;
+  transition: left 0.3s ease; /* smooth horizontal slide */
+  z-index: 2000;
+  background-color:white;
+  border-radius:5px;
+ 
+  left:-1000px;
+  margin-top:60px;
+  border-color:rgb(119, 116, 116);
+  border-style:solid;
+
+
+}
+.success{
+  margin-top:40px;
+}
+
+.final.active {
+  left: 0px;          /* visible position */
+  /* do not change top */
+}

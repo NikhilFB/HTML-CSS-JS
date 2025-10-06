@@ -6,9 +6,12 @@ let tooltip3 = document.querySelector("#message3");
 let sidebar = document.querySelector(".ham1");
 let openButton = document.querySelector(".ham-button");
 let closeButton = document.querySelector(".close-button");
+let final = document.querySelector(".final");
+
 
 
 button.addEventListener('click',() => {
+  let user = 0,email1 = 0,pass = 0;
   let username = document.querySelector(".username").value.trim();
   let email = document.querySelector(".email").value.trim();
   let password = document.querySelector(".password").value.trim();
@@ -18,8 +21,14 @@ button.addEventListener('click',() => {
     setTimeout(() => {
       tooltip1.innerHTML  = '';
      
+     
     },3000);
     return; 
+    
+
+  }
+  else{
+    user = 1;
   }
 
   if(!email.includes('@') || !email.includes('.')){
@@ -31,15 +40,32 @@ button.addEventListener('click',() => {
     return;
    
   }
+   else{
+    email1 = 1;
+  }
   
   if(password.length < 8){
      tooltip3.innerHTML = 'Enter a valid password';
      setTimeout(() => {
       tooltip3.innerHTML  = '';
+      count++;
   
     },3000);
     return;
    
+  }
+   else{
+    pass = 1;
+  }
+
+  if(user == 1 && email1 == 1 && pass == 1 ){
+    final.classList.add('active');
+    setTimeout(() => {
+      final.classList.remove('active');
+
+    },1000);
+   
+
   }
 });
 openButton.addEventListener('click',() => {
