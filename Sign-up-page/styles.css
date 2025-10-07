@@ -199,7 +199,7 @@ input{
 .options a:hover{
   text-decoration:underline;
 }
-.final {
+.final{
   text-align:center;
   padding:10px;
   margin:auto ;
@@ -228,7 +228,11 @@ input{
   margin-top:40px;
 }
 
-.final.active {
+.final.active,#captcha-container {
   left: 0px;          /* visible position */
   /* do not change top */
+}
+input:focus{
+  border-color:black;
+  border-width:1.5px;
 }
