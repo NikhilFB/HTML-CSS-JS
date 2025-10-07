@@ -1,20 +1,32 @@
+import {arr} from "./data.js";
+
 let button = document.querySelector(".signup-button");
 let tooltip1 = document.querySelector("#message1");
 let tooltip2 = document.querySelector("#message2");
 let tooltip3 = document.querySelector("#message3");
-
 let sidebar = document.querySelector(".ham1");
 let openButton = document.querySelector(".ham-button");
 let closeButton = document.querySelector(".close-button");
 let final = document.querySelector(".final");
 
 
-
 button.addEventListener('click',() => {
+  
   let user = 0,email1 = 0,pass = 0;
   let username = document.querySelector(".username").value.trim();
   let email = document.querySelector(".email").value.trim();
   let password = document.querySelector(".password").value.trim();
+
+  if(arr.some(object => object.email === email)){
+    tooltip2.innerHTML = 'Email already exists';
+     setTimeout(() => {
+      tooltip2.innerHTML  = '';
+     
+     
+    },3000);
+    return;
+
+  }
 
   if(username.length < 3){
     tooltip1.innerHTML = 'Username should not be less than 3 characters'
@@ -59,6 +71,14 @@ button.addEventListener('click',() => {
   }
 
   if(user == 1 && email1 == 1 && pass == 1 ){
+    let object = {
+      username:username,
+      email:email,
+      password:password
+    }
+    arr.push(object);
+    console.log(arr);
+   
     final.classList.add('active');
     setTimeout(() => {
       final.classList.remove('active');
