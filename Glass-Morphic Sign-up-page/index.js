@@ -11,7 +11,7 @@ let final = document.querySelector(".final");
 let toggle = document.querySelector("#darkMode");
 toggle.addEventListener("change", () => {
   if (toggle.checked) {
-    document.body.style.background = "url('./night-cherry2.jpeg')";
+    document.body.style.background = "url('./night-cherry-blossom.jpg')";
     document.body.style.transition = "background 0.2s ease";
 
   }
