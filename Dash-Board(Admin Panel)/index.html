@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advanced Fitness Tracker</title>
+<link rel="stylesheet" href="index.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<div class="dashboard">
+
+  <header>
+    <h1>🏋️ Fitness Dashboard</h1>
+    <button id="themeToggle">🌙</button>
+  </header>
+
+  <!-- Add Activity Form -->
+  <section class="add-activity">
+    <h2>Add Workout</h2>
+    <div class="form-group">
+      <select id="activityType">
+        <option value="">Select Activity</option>
+        <option value="Running">Running</option>
+        <option value="Cycling">Cycling</option>
+        <option value="Yoga">Yoga</option>
+        <option value="Gym">Gym</option>
+        <option value="Swimming">Swimming</option>
+      </select>
+      <input type="number" id="duration" placeholder="Duration (min)">
+      <input type="number" id="calories" placeholder="Calories Burned">
+      <input type="number" id="distance" placeholder="Distance (km)">
+      <input type="date" id="date">
+      <button id="addBtn">Add Workout</button>
+    </div>
+  </section>
+
+  <!-- Analytics Cards -->
+  <section class="cards">
+    <div class="card"><h3>Total Workouts</h3><p id="totalWorkouts">0</p></div>
+    <div class="card"><h3>Total Calories</h3><p id="totalCalories">0</p></div>
+    <div class="card"><h3>Total Distance</h3><p id="totalDistance">0 km</p></div>
+    <div class="card"><h3>Average Duration</h3><p id="avgDuration">0 min</p></div>
+    <div class="card"><h3>BMI</h3><p id="bmi">--</p></div>
+  </section>
+
+  <!-- Advanced Charts -->
+  <section class="charts">
+    <h2>Analytics</h2>
+    <canvas id="caloriesChart"></canvas>
+    <canvas id="activityChart"></canvas>
+  </section>
+
+  <!-- Achievements & Badges -->
+  <section class="achievements">
+    <h2>Achievements</h2>
+    <div class="badges" id="badges"></div>
+  </section>
+
+  <!-- Activity Log -->
+  <section class="activity-log">
+    <h2>Activity Log</h2>
+    <input type="text" id="search" placeholder="Search Activity...">
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Duration</th>
+          <th>Calories</th>
+          <th>Distance</th>
+          <th>Date</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="activityTable"></tbody>
+    </table>
+  </section>
+
+  <!-- BMI Calculator -->
+  <section class="bmi-calc">
+    <h2>Calculate BMI</h2>
+    <input type="number" id="weight" placeholder="Weight (kg)">
+    <input type="number" id="height" placeholder="Height (cm)">
+    <button id="calcBmi">Calculate</button>
+    <p id="bmiResult"></p>
+  </section>
+
+</div>
+
+<script src="index.js"></script>
+</body>
+</html>
