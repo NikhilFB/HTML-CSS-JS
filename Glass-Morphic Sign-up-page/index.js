@@ -8,6 +8,19 @@ let openButton = document.querySelector(".ham-button");
 let closeButton = document.querySelector(".close-button");
 let final = document.querySelector(".final");
 
+let toggle = document.querySelector("#darkMode");
+toggle.addEventListener("change", () => {
+  if (toggle.checked) {
+    document.body.style.background = "url('./night-cherry2.jpeg')";
+    document.body.style.transition = "background 0.2s ease";
+
+  }
+  else{
+    document.body.style.background = "url('./cherry.jpg')";
+
+  }
+})
+
 
 button.addEventListener('click', () => {
 
