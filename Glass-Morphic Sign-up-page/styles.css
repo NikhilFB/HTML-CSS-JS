@@ -305,14 +305,20 @@ input {
   margin-top: 40px;
 }
 
-.final.active,
-#captcha-container {
+.final.active{
   left: 0px;
-  /* visible position */
-  /* do not change top */
 }
 
 input:focus {
   border-color: black;
   border-width: 1.5px;
+}
+#captcha-container{
+  margin-left:30px;
+  margin-top:5px;
+  width:200px;
+  display:none;
+}
+#captcha-container.active{
+  display:block;
 }
