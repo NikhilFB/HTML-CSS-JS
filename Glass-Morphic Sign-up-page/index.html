@@ -1,24 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A simple webpage">
+  <meta name="author" content="Your Name">
   <link rel="stylesheet" href="styles.css">
+  <title>Sign Up Page</title>
 </head>
 
 <body>
 
-  <div class = 'toggle'>
-    <input type = "checkbox" id = "darkMode">
+  <div class='toggle'>
+    <input type="checkbox" id="darkMode">
     <label for="darkMode" class="toggle2">
       <span class="slider"></span>
     </label>
   </div>
 
-  <div>
-    <button class="ham-button">
-      <img class="ham" src="hamburger.svg">
-    </button>
-  </div>
+  <button class="ham-button">
+    <img class="ham" src="hamburger.svg">
+  </button>
 
   <div class="ham1">
     <div class="menu">
@@ -44,20 +48,18 @@
       <input class="username" id="username1" type="text" placeholder=" ">
       <label for="username">Username</label>
       <div class="tool-tip" id="message1"></div>
-
     </div>
+
     <div class="input1">
       <input class="email" type="text" id="email1" placeholder=" ">
       <label for="Email">Email</label>
       <div class="tool-tip" id="message2"></div>
-
     </div>
 
     <div class="input1">
       <input class="password" type="text" id="password1" placeholder=" ">
       <label for="Password">Password</label>
       <div class="tool-tip" id="message3"></div>
-
     </div>
 
     <button class="signup-button">Sign Up</button>
@@ -71,15 +73,10 @@
       <p class="success">Account created successfully.</p>
     </div>
 
-
-
-
-
   </div>
 
   <script src="index.js" type="module"></script>
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 </body>
-
 </html>
