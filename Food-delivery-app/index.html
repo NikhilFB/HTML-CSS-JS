@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple webpage">
+    <meta name="author" content="Your Name">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Sign Up Page</title>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <div class="left-section">
+            <div class="burger-logo">
+                <img class="logo" src="burger.png" alt="Burger Logo">
+            </div>
+            <p class="restaurant-name">QuickBite</p>
+        </div>
+
+        <div class="right-section">
+            <p>Home</p>
+            <p>Restaurants</p>
+            <p>My Orders</p>
+            <p>Profile</p>
+        </div>
+    </div>
+
+    <!-- Home Section -->
+    <div class="home">
+        <div class="home-content">
+            <p class="r1">Delicious Food, Delivered Fast</p>
+            <p class="r2">Order from your favourite restaurants</p>
+
+            <input type="text" placeholder="Search for your favourite restaurants or dishes...">
+            <input type="text" placeholder="Enter delivery address">
+        </div>
+    </div>
+
+    <p class="filter">Filter By</p>
+
+    <div class="filter-buttons">
+        <button class="all-button">All</button>
+        <button>🍕 Pizza</button>
+        <button>🍔 Burger</button>
+        <button>🍣 Sushi</button>
+        <button>🍛 Curry</button>
+    </div>
+
+    <p class="sort-by">Sort by:</p>
+    <select class="sort">
+        <option>Highest rating</option>
+        <option>Lowest rating</option>
+        <option>Price: High to Low</option>
+        <option>Price: Low to High</option>
+    </select>
+
+    <div class="popular-restaurants">
+        <p>Popular Restaurants</p>
+    </div>
+
+    <div class = "item-holder"></div>
+
+  
+   <script src = "index.js" type = "module"></script>
+</body>
+
+</html>

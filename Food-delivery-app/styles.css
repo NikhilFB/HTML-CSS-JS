@@ -1,0 +1,217 @@
+
+*{
+    box-sizing:border-box;
+}
+body{
+    padding:0;
+    margin:0;
+    padding-bottom:500px;
+    font-family:'Poppins','sans-serif';
+}
+p{
+    margin-top:40px;
+    margin-right:50px;
+  
+}
+.restaurant-name{
+    margin-left:0;
+    margin-top:45px;
+    font-size:25px;
+    font-weight:500;
+   
+}
+
+.navbar{
+    height:50px;
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:30px;
+}
+.left-section{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+.right-section{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding-top:0px;
+    margin-right:180px;
+
+}
+
+.burger-logo{
+    width:130px;
+}
+.logo{
+    width:100%;
+    margin-top:20px;
+}
+.home{
+    margin-top:0px;
+    text-align:center;
+    background-color:#0f1724;
+    padding-top:30px;   
+    padding-bottom:80px;
+}
+.r1{
+    font-size:50px;
+    margin-bottom:0;
+    color:white;
+}
+.r2{
+    font-size:20px;
+    margin-top:40px;
+    color:white;
+}
+.home input {
+    display: block;
+    margin: 40px auto; /* centers horizontally */
+    width: 600px;
+    height: 45px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+    padding: 0 25px;
+    font-size: 15px;
+}
+
+.filter{
+    font-size:25px;
+    font-weight:600;
+    margin-left:180px;
+}
+.filter-buttons{
+    margin-left:180px;
+    display:flex;
+    gap:20px;
+}
+
+.filter-buttons button{
+    font-family:'Poppins','serif';
+    width:95px;
+    border-radius:20px;
+    border-style:none;
+    height:40px;
+    background-color:rgb(225, 72, 6);
+    color:white;
+    font-weight:400;
+    cursor:pointer;
+    transition:background-color 0.15s;
+}
+
+.filter-buttons button:hover{
+    background-color:rgb(219, 97, 45);
+
+}
+.sort-by{
+    font-family:'Poppins','serif';
+    font-size:15px;
+    font-weight:600;
+    display:inline-block;
+    margin-left:180px;
+    margin-right:0px;
+}
+.sort{
+    border-radius:5px;
+    border:none;
+    box-shadow:0px 0px 2px rgba(0,0,0,0.15) inset;
+    cursor:pointer;
+    width:150px;
+    height:40px;
+    padding:5px;
+    font-family:'Poppins','serif';
+    font-size:13px;
+    margin-left:10px;
+}
+.popular-restaurants{
+    margin-top:100px;
+    margin-left:180px;
+    font-size:30px;
+    font-weight:600;
+}
+.item-holder{
+    display:block;
+    width:100%;
+    display:grid;
+    row-gap:30px;
+    column-gap:30px;
+    grid-template-columns:1fr 1fr 1fr;
+    margin-left:180px;
+    width:1150px;
+    height:auto;
+}
+
+.item{
+    border-radius:12px;
+    height:auto;
+    overflow:hidden;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.15);
+    transition:transform 0.15s;
+}
+.food{
+    display:block;
+    object-fit:cover;
+    width:100%;
+    height:210px;
+}
+
+.image{
+    object-fit:cover;
+    width:100%;
+    height:100%;
+}
+.rating-time{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.rating{
+    width:40px;
+}
+.name{
+    margin-top:35px;
+    margin-bottom:0;
+    font-size:20px;
+    font-weight:600;
+}
+.country-item{
+    margin-top:20px;
+    font-weight:18px;
+}
+.rating-time p{
+    margin-top:0;
+}
+.rating{
+    width:65px;
+    background-color:green;
+    padding:5px;
+    text-align:center;
+    border-radius:6px;
+    color:white;
+    font-weight:400;
+    margin:0
+}
+.time{
+    margin:0;
+    font-size:15px;
+    color:gray
+}
+.second{
+    padding-right:20px;
+    padding-left:20px;
+    padding-bottom:5px;
+}
+.min-order{
+    font-size:15px;
+    margin-top:10px;
+}
+.item:hover{
+    box-shadow:0px 0px 12px rgba(0,0,0,0.18);
+    transform:translateY(-5px);
+    cursor:pointer;
+}
