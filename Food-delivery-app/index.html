@@ -32,43 +32,48 @@
         </div>
     </div>
 
-    <!-- Home Section -->
-    <div class="home">
-        <div class="home-content">
-            <p class="r1">Delicious Food, Delivered Fast</p>
-            <p class="r2">Order from your favourite restaurants</p>
+    <div class="Home">
+        <div class="home">
+            <div class="overlay">
+                <p class="r1">Delicious Food, Delivered Fast</p>
+                <p class="r2">Order from your favourite restaurants</p>
 
-            <input type="text" placeholder="Search for your favourite restaurants or dishes...">
-            <input type="text" placeholder="Enter delivery address">
+                <input type="text" placeholder="Search for your favourite restaurants or dishes...">
+                <input type="text" placeholder="📍Enter delivery address">
+            </div>
         </div>
     </div>
+
+
 
     <p class="filter">Filter By</p>
 
     <div class="filter-buttons">
         <button class="all-button">All</button>
-        <button>🍕 Pizza</button>
-        <button>🍔 Burger</button>
-        <button>🍣 Sushi</button>
-        <button>🍛 Curry</button>
+        <button class = "pizza" >🍕 Pizza</button>
+        <button class = "burger" >🍔 Burger</button>
+        <button class = "sushi" >🍣 Sushi</button>
+        <button class = "curry" >🍛 Curry</button>
     </div>
 
     <p class="sort-by">Sort by:</p>
     <select class="sort">
-        <option>Highest rating</option>
-        <option>Lowest rating</option>
-        <option>Price: High to Low</option>
-        <option>Price: Low to High</option>
+        <option value = "All">All</option>
+        <option value = "Highest">Highest rating</option>
+        <option value = "Lowest">Lowest rating</option>
+        <option value = "High-Low">Price: High to Low</option>
+        <option value = "Low-High">Price: Low to High</option>
     </select>
 
     <div class="popular-restaurants">
         <p>Popular Restaurants</p>
     </div>
 
-    <div class = "item-holder"></div>
+    <div class="item-holder"></div>
 
-  
-   <script src = "index.js" type = "module"></script>
+
+    <script src="index.js" type="module"></script>
+    <script src = "filter.js" type = "module"></script>
 </body>
 
 </html>

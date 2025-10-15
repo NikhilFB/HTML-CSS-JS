@@ -49,19 +49,31 @@ p{
     width:100%;
     margin-top:20px;
 }
+.Home{
+    position:relative;
+    margin-bottom:50px;
+    height:500px;;
+    background:url('images/background.png');
+}
 .home{
+    right:0;
+    left:0;
+    position:absolute;
     margin-top:0px;
     text-align:center;
-    background-color:#0f1724;
+    background:transparent;
     padding-top:30px;   
     padding-bottom:80px;
+     height:500px;;
 }
 .r1{
+    font-weight:600;
     font-size:50px;
     margin-bottom:0;
-    color:white;
+    color:white
 }
 .r2{
+    font-weight:600;
     font-size:20px;
     margin-top:40px;
     color:white;
@@ -77,6 +89,15 @@ p{
     box-shadow: 0 0 10px rgba(0,0,0,0.15);
     padding: 0 25px;
     font-size: 15px;
+    background: linear-gradient(145deg, #ffb347, #ffcc33);
+  
+}
+.home input::placeholder{
+    font-family:'Poppins','sans-serif';
+    color:white;
+    font-weight:400;
+
+
 }
 
 .filter{
