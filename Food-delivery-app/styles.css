@@ -115,17 +115,17 @@ p{
     font-family:'Poppins','serif';
     width:95px;
     border-radius:20px;
-    border-style:none;
+    border:2px solid transparent;
     height:40px;
-    background-color:rgb(225, 72, 6);
-    color:white;
+    background-color:rgb(246, 244, 244);
+    color:black;
     font-weight:400;
     cursor:pointer;
-    transition:background-color 0.15s;
+    transition:border-color 0.2s;
 }
 
 .filter-buttons button:hover{
-    background-color:rgb(219, 97, 45);
+    border-color:rgb(216, 80, 22);
 
 }
 .sort-by{

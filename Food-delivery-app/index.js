@@ -1,5 +1,6 @@
 import restaurants from "./data.js";
 const itemHolder = document.querySelector(".item-holder");
+const item =  document.querySelector(".item");
 let html = "";
 
 restaurants.forEach((item) => {
@@ -24,3 +25,7 @@ restaurants.forEach((item) => {
 });
 
 itemHolder.innerHTML = html;
+item.addEventListener('click',() => {
+  
+})
+
