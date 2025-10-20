@@ -25,7 +25,3 @@ restaurants.forEach((item) => {
 });
 
 itemHolder.innerHTML = html;
-item.addEventListener('click',() => {
-  
-})
-

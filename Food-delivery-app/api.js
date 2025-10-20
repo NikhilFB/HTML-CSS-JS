@@ -1,0 +1,52 @@
+const apiKey = "080ffc3829d74adea92038d2f0a10ad6"; // Your Geoapify API key
+
+
+function getUserLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(
+      position => {
+        const lat = position.coords.latitude;
+        const lon = position.coords.longitude;
+        console.log("Your location:", lat, lon);
+        getNearbyRestaurants(lat, lon);
+      },
+      error => {
+        console.error("Error getting location:", error);
+        alert("Unable to fetch location. Please enable location access.");
+      }
+    );
+  } else {
+    alert("Geolocation is not supported by this browser.");
+  }
+}
+
+
+async function getNearbyRestaurants(lat, lon) {
+  const radius = 8000; // 8km radius
+  const url = `https://api.geoapify.com/v2/places?categories=catering.restaurant&filter=circle:${lon},${lat},${radius}&limit=50&apiKey=${apiKey}`;
+
+  try {
+    const res = await fetch(url);
+    const data = await res.json();
+
+    if (data && data.features) {
+      const restaurants = data.features.map(place => ({
+        name: place.properties.name,
+        address: place.properties.formatted,
+        country: place.properties.country,
+        lat: place.properties.lat,
+        lon: place.properties.lon
+      }));
+
+      console.log("Nearby restaurants:", restaurants);
+    
+    } else {
+      console.log("No nearby restaurants found.");
+    }
+  } catch (error) {
+    console.error("Error fetching restaurants:", error);
+  }
+}
+
+
+document.querySelector(".search-button").addEventListener("click", getUserLocation);

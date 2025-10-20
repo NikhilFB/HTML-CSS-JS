@@ -78,7 +78,7 @@ p{
     margin-top:40px;
     color:white;
 }
-.home input {
+.home button {
     display: block;
     margin: 40px auto; /* centers horizontally */
     width: 600px;
@@ -87,18 +87,25 @@ p{
     border: none;
     outline: none;
     box-shadow: 0 0 10px rgba(0,0,0,0.15);
-    padding: 0 25px;
-    font-size: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 16px;
     background: linear-gradient(145deg, #ffb347, #ffcc33);
+    color:white;
+    font-family:'Poppins','sans-serif';
+    font-weight:600;
+    cursor:pointer;
+   
   
 }
-.home input::placeholder{
-    font-family:'Poppins','sans-serif';
-    color:white;
-    font-weight:400;
-
+.home button:hover{
+    background: linear-gradient(145deg, #e5982e, #ffcc33);
+    
 
 }
+
 
 .filter{
     font-size:25px;
