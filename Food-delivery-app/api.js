@@ -1,4 +1,4 @@
-const apiKey = "080ffc3829d74adea92038d2f0a10ad6"; // Your Geoapify API key
+const apiKey = ""; // Your Geoapify API key
 
 
 function getUserLocation() {
