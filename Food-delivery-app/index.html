@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 
-    <title>Sign Up Page</title>
+    <title>QuickBite</title>
 </head>
 
 <body>
@@ -38,62 +38,38 @@
                 <p class="r1">Delicious Food, Delivered Fast</p>
                 <p class="r2">Order from your favourite restaurants</p>
 
-                <button class = "search-button">Click here to search for restaurants near you</button>
-              
+                <button class="search-button">Click here to search for restaurants near you</button>
             </div>
         </div>
     </div>
-
-
 
     <p class="filter">Filter By</p>
 
     <div class="filter-buttons">
         <button class="all-button">All</button>
-        <button class = "pizza" >🍕 Pizza</button>
-        <button class = "burger" >🍔 Burger</button>
-        <button class = "sushi" >🍣 Sushi</button>
-        <button class = "curry" >🍛 Curry</button>
+        <button class="pizza">🍕 Pizza</button>
+        <button class="burger">🍔 Burger</button>
+        <button class="sushi">🍣 Sushi</button>
+        <button class="curry">🍛 Curry</button>
     </div>
 
     <p class="sort-by">Sort by:</p>
     <select class="sort">
-        <option value = "All">All</option>
-        <option value = "Highest">Highest rating</option>
-        <option value = "Lowest">Lowest rating</option>
-        <option value = "High-Low">Price: High to Low</option>
-        <option value = "Low-High">Price: Low to High</option>
+        <option value="All">All</option>
+        <option value="Highest">Highest rating</option>
+        <option value="Lowest">Lowest rating</option>
+        <option value="High-Low">Price: High to Low</option>
+        <option value="Low-High">Price: Low to High</option>
     </select>
 
     <div class="popular-restaurants">
         <p>Popular Restaurants</p>
     </div>
 
+    <!-- Dynamic container for restaurants -->
     <div class="item-holder"></div>
-    <div class = "menu1">
-        <p>Pizza Palace</p>
-        <p>Italian, Pizza • 4.5 ⭐ • 30-40 min</p>
-        <p>Menu</p>
-     
-        <div class = "menu2">
-            <div class = "dishes">
-                <img class = "menu-image" src = "images/burger1.jpg">
-            </div>
-            <div>  
-                <p>Margherita Pizza</p>
-                <p>Classic tomato and mozzarella</p>
-                <p>$12.99</p>
-            </div>
-            <div>
-                <button>Add to Cart</button>
-            </div>
-        </div>
-    </div>
 
-
-    <script src="index.js" type="module"></script>
-    <script src = "api.js"></script>
-    <script src = "filter.js" type = "module"></script>
+    <script src="api.js" type="module"></script>
 </body>
 
 </html>

@@ -1,4 +1,7 @@
-const apiKey = ""; // Your Geoapify API key
+const apiKey = "";
+const searchButton = document.querySelector(".search-button");
+const itemHolder = document.querySelector(".item-holder");
+const item = document.querySelector(".item");
 
 
 function getUserLocation() {
@@ -39,7 +42,8 @@ async function getNearbyRestaurants(lat, lon) {
       }));
 
       console.log("Nearby restaurants:", restaurants);
-    
+      render(restaurants)
+
     } else {
       console.log("No nearby restaurants found.");
     }
@@ -48,5 +52,25 @@ async function getNearbyRestaurants(lat, lon) {
   }
 }
 
+function render(restaurants) {
+  let html = "";
+  restaurants.forEach((item) => {
+    html += `
+    <div class="item">
+      
+      <div class = "second">
+        <p class="name">${item.name}</p>
+        <p class="country-item">${item.country}</p>
+      </div>
 
-document.querySelector(".search-button").addEventListener("click", getUserLocation);
+    </div>
+  `;
+  });
+  itemHolder.innerHTML = html;
+  
+
+
+}
+searchButton.addEventListener('click',() => {getUserLocation()})
+
+
