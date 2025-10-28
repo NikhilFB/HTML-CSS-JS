@@ -1,4 +1,4 @@
-const apiKey = "";
+const apiKey = "080ffc3829d74adea92038d2f0a10ad6";
 const searchButton = document.querySelector(".search-button");
 const itemHolder = document.querySelector(".item-holder");
 const item = document.querySelector(".item");
