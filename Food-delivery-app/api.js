@@ -1,7 +1,8 @@
-const apiKey = "080ffc3829d74adea92038d2f0a10ad6";
+const apiKey = "";
 const searchButton = document.querySelector(".search-button");
 const itemHolder = document.querySelector(".item-holder");
-const item = document.querySelector(".item");
+const Items = document.querySelector(".Items");
+import restaurants from "./data.js"; 
 
 
 function getUserLocation() {
@@ -26,24 +27,25 @@ function getUserLocation() {
 
 async function getNearbyRestaurants(lat, lon) {
   const radius = 8000; // 8km radius
-  const url = `https://api.geoapify.com/v2/places?categories=catering.restaurant&filter=circle:${lon},${lat},${radius}&limit=50&apiKey=${apiKey}`;
+  const url = `https://api.geoapify.com/v2/places?categories=catering.restaurant&filter=circle:${lon},${lat},${radius}&limit=30&apiKey=${apiKey}`;
 
   try {
     const res = await fetch(url);
     const data = await res.json();
 
     if (data && data.features) {
-      const restaurants = data.features.map(place => ({
-        name: place.properties.name,
-        address: place.properties.formatted,
-        country: place.properties.country,
+      const nearbyRestaurants = data.features.map((place, index) => ({
+        id: index + 1,
+        name: place.properties.name || "Unnamed Restaurant",
+        address: place.properties.formatted || "No address available",
+        country: place.properties.country || "Unknown",
         lat: place.properties.lat,
         lon: place.properties.lon
       }));
 
-      console.log("Nearby restaurants:", restaurants);
-      render(restaurants)
-
+      console.log("Nearby restaurants:", nearbyRestaurants);
+      localStorage.setItem('fetchedRestaurants',JSON.stringify(nearbyRestaurants));
+      render(nearbyRestaurants);
     } else {
       console.log("No nearby restaurants found.");
     }
@@ -52,25 +54,48 @@ async function getNearbyRestaurants(lat, lon) {
   }
 }
 
-function render(restaurants) {
-  let html = "";
-  restaurants.forEach((item) => {
-    html += `
-    <div class="item">
-      
-      <div class = "second">
-        <p class="name">${item.name}</p>
-        <p class="country-item">${item.country}</p>
-      </div>
 
-    </div>
-  `;
+function render(restaurantsList) {
+  let html = "";
+  restaurantsList.forEach((item) => {
+    html += `
+      <div class="item" data-id="${item.id}">
+        <div class="second">
+          <p class="name">${item.name}</p>
+          <p class="country-item">${item.country}</p>
+        </div>
+      </div>
+    `;
   });
   itemHolder.innerHTML = html;
-  
-
-
 }
-searchButton.addEventListener('click',() => {getUserLocation()})
+
+
+searchButton.addEventListener("click", () => {
+  getUserLocation();
+});
+
+
+itemHolder.addEventListener("click", (e) => {
+  const item = e.target.closest(".item");
+  if (!item) return; 
+  const storedRestaurants = JSON.parse(localStorage.getItem("fetchedRestaurants")) || [];
+  const restaurantId = parseInt(item.dataset.id);
+  const restaurant = storedRestaurants.find(r => r.id === restaurantId);
+
+  if (restaurant) {
+    localStorage.setItem("selectedRestaurant", JSON.stringify(restaurant));
+    window.location.href = "menu.html";
+  } 
+});
+window.addEventListener("DOMContentLoaded",() => {
+  const storedRestaurants = JSON.parse(localStorage.getItem("fetchedRestaurants")) || [];
+  if(storedRestaurants.length > 0){
+    render(storedRestaurants);
+  }
+  
+})
+
+
 
 
